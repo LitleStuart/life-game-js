@@ -1,1 +1,1 @@
-"# life-game-js" 
+# life-game-js
