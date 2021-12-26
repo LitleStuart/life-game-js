@@ -25,14 +25,33 @@
       <div class="section">
         <h5>Game controls</h5>
         <div class="row">
-          <a class="waves-effect waves-light btn">Next</a>
+          <a class="waves-effect waves-light btn" onclick="step()">Step</a>
           <a class="waves-effect waves-light btn">Start</a>
           <a class="waves-effect waves-light btn">Stop</a>
           <a class="waves-effect waves-light btn">Random</a>
         </div>
+        <div class="row">
+          <input class="col s1" type="number" id="width" value="50" />
+          <input
+            class="col s1"
+            type="number"
+            id="height"
+            value="30"
+            style="margin: 0px 5px"
+          />
+          <a
+            href="#"
+            class="waves-effect waves-light btn"
+            style="margin-top: 10px"
+            onclick="makeWorld()"
+            >New World</a
+          >
+        </div>
       </div>
       <div class="devider"></div>
+      <div id="game"></div>
     </div>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
