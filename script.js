@@ -1,3 +1,4 @@
+let timeout;
 let cells = [];
 const CELL_SIZE = 20;
 
@@ -139,4 +140,26 @@ function step() {
       drawCell(x, y);
     }
   }
+}
+
+function random() {
+  const width = cells.length;
+  const height = cells[0].length;
+  for (let x = 0; x < width; x++) {
+    for (let y = 0; y < height; y++) {
+      cells[x][y] = Math.round(Math.random());
+      drawCell(x, y);
+    }
+  }
+}
+
+function start() {
+  timeout = setTimeout(() => {
+    step();
+    start();
+  }, 300);
+}
+
+function stop() {
+  clearInterval(timeout);
 }
