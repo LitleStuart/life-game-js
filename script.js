@@ -2,6 +2,14 @@ let cells = [];
 const CELL_SIZE = 20;
 
 const game = document.getElementById("game");
+const inputWidth = document.getElementById("width");
+const inputHeight = document.getElementById("height");
+if (
+  document.documentElement.clientWidth < document.documentElement.clientHeight
+) {
+  inputWidth.value = 17;
+  inputHeight.value = 25;
+}
 const width = Number(document.getElementById("width").value);
 const height = Number(document.getElementById("height").value);
 game.innerHTML = `<canvas id="world" width="${width * CELL_SIZE}" height="${

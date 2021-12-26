@@ -11,7 +11,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
@@ -31,18 +30,32 @@
           <a class="waves-effect waves-light btn">Random</a>
         </div>
         <div class="row">
-          <input class="col s1" type="number" id="width" value="50" />
-          <input
-            class="col s1"
-            type="number"
-            id="height"
-            value="30"
-            style="margin: 0px 5px"
-          />
+          <div class="input-field col m1 s2">
+            <input
+              type="number"
+              id="width"
+              value="50"
+              max="50"
+              min="1"
+              placeholder="max: 50"
+            />
+            <label for="width">Width</label>
+          </div>
+          <div class="input-field col m1 s2">
+            <input
+              type="number"
+              id="height"
+              value="30"
+              max="30"
+              min="1"
+              placeholder="max: 30"
+            />
+            <label for="height">Height</label>
+          </div>
           <a
             href="#"
             class="waves-effect waves-light btn"
-            style="margin-top: 10px"
+            style="margin-top: 23px"
             onclick="makeWorld()"
             >New World</a
           >
