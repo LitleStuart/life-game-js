@@ -1,4 +1,4 @@
-let timeout;
+let interval;
 let cells = [];
 const CELL_SIZE = 20;
 
@@ -154,12 +154,10 @@ function random() {
 }
 
 function start() {
-  timeout = setTimeout(() => {
-    step();
-    start();
-  }, 300);
+  clearInterval(interval);
+  interval = setInterval(step, 300);
 }
 
 function stop() {
-  clearInterval(timeout);
+  clearInterval(interval);
 }
